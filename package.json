@@ -1,0 +1,14 @@
+{
+    "name": "AER",
+    "version": "0.0.1",
+    "scripts": {
+        "build": "npm run build-css && npm run copy:html && npm run copy:assets",
+        "build-css": "node-sass ./src/character/character.scss ./dist/character/character.css",
+        "copy:html": "cpx ./src/character/character.html ./dist/character/",
+        "copy:assets": "cpx ./src/img/* ./dist/img"
+    },
+    "dependencies": {
+        "cpx": "^1.5.0",
+        "node-sass": "4.13.1"
+    }
+}
