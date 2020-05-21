@@ -1,6 +1,6 @@
 {
     "name": "AER",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "scripts": {
         "build": "npm run build-css && npm run copy:html && npm run copy:assets",
         "build-css": "node-sass ./src/character/character.scss ./dist/character/character.css",

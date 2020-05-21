@@ -13,7 +13,7 @@ html, body {
 /**
  Define the environnement of the character AER
  **/
-.aer-character {
+.sheet-aer-character {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@ html, body {
   /**
     * Colonne de droite
     */ }
-  .aer-character .aer-header {
+  .sheet-aer-character .sheet-aer-header {
     margin: 0 auto;
     padding: 8px 0;
     display: block;
@@ -43,30 +43,30 @@ html, body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; }
-  .aer-character .aer-character-content {
+  .sheet-aer-character .sheet-aer-character-content {
     flex: 1 1 auto;
     overflow-y: scroll;
     overflow-x: hidden; }
-    .aer-character .aer-character-content table td {
+    .sheet-aer-character .sheet-aer-character-content table td {
       vertical-align: top; }
-    .aer-character .aer-character-content table .aer-table-title, .aer-character .aer-character-content table .aer-table-vertical thead th, .aer-character .aer-character-content table .aer-table-horizontal tbody td:first-child {
+    .sheet-aer-character .sheet-aer-character-content table .aer-table-title, .sheet-aer-character .sheet-aer-character-content table .aer-table-vertical thead th, .sheet-aer-character .sheet-aer-character-content table .aer-table-horizontal tbody td:first-child {
       text-align: center;
       color: #5f5f5f;
       font-size: 20px;
       font-weight: bold; }
-    .aer-character .aer-character-content table .aer-character-left {
+    .sheet-aer-character .sheet-aer-character-content table .aer-character-left {
       display: flex;
       flex-direction: column;
       padding: 0 16px; }
-    .aer-character .aer-character-content h2 {
+    .sheet-aer-character .sheet-aer-character-content h2 {
       display: flex;
       flex-direction: column;
       align-items: center; }
-      .aer-character .aer-character-content h2 span {
+      .sheet-aer-character .sheet-aer-character-content h2 span {
         display: flex;
         flex-direction: row;
         color: #5f5f5f; }
-        .aer-character .aer-character-content h2 span::before {
+        .sheet-aer-character .sheet-aer-character-content h2 span::before {
           width: 80px;
           height: 26px;
           background-image: url("../img/dague-gauche.png");
@@ -76,7 +76,7 @@ html, body {
           display: block;
           content: "";
           margin-right: 8px; }
-        .aer-character .aer-character-content h2 span::after {
+        .sheet-aer-character .sheet-aer-character-content h2 span::after {
           width: 80px;
           height: 26px;
           background-image: url("../img/dague-droite.png");
@@ -86,123 +86,144 @@ html, body {
           display: block;
           content: "";
           margin-left: 8px; }
-    .aer-character .aer-character-content .parchemin {
-      display: block;
+    .sheet-aer-character .sheet-aer-character-content input, .sheet-aer-character .sheet-aer-character-content .sheet-parchemin .sheet-value, .sheet-aer-character .sheet-aer-character-content .sheet-parchemin-long .sheet-value {
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid black;
+      padding: 8px; }
+    .sheet-aer-character .sheet-aer-character-content .sheet-parchemin {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       width: 70px;
       height: 50px;
       background-image: url("../img/Parchemin.png");
       background-repeat: no-repeat;
       background-size: contain;
       text-align: center; }
-      .aer-character .aer-character-content .parchemin .value {
+      .sheet-aer-character .sheet-aer-character-content .sheet-parchemin .sheet-value {
+        border: 0;
         font-size: 16px;
-        color: black; }
-    .aer-character .aer-character-content .parchemin-long {
+        color: black;
+        width: 45px;
+        text-align: center; }
+    .sheet-aer-character .sheet-aer-character-content .sheet-parchemin-long {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       background-image: url("../img/parchemin-long.png");
       background-repeat: no-repeat;
       background-size: cover;
       width: 120px;
       height: 90px;
       text-align: center; }
-      .aer-character .aer-character-content .parchemin-long .value {
+      .sheet-aer-character .sheet-aer-character-content .sheet-parchemin-long .sheet-value {
+        border: 0;
         font-size: 16px;
-        color: black; }
-  .aer-character .aer-identity {
+        color: black;
+        width: 45px;
+        text-align: center; }
+  .sheet-aer-character .sheet-aer-identity {
     display: flex;
     flex-direction: column; }
-    .aer-character .aer-identity .aer-identity-content {
+    .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content {
       flex: 1 1 auto;
       display: flex;
       flex-direction: row;
       justify-content: space-around; }
-      .aer-character .aer-identity .aer-identity-content .aer-identity-left, .aer-character .aer-identity .aer-identity-content .aer-identity-right {
+      .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-left, .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-right {
         display: flex;
         flex-direction: column; }
-        .aer-character .aer-identity .aer-identity-content .aer-identity-left div, .aer-character .aer-identity .aer-identity-content .aer-identity-right div {
+        .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-left div, .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-right div {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           padding: 8px 0;
           align-items: center; }
-          .aer-character .aer-identity .aer-identity-content .aer-identity-left div label, .aer-character .aer-identity .aer-identity-content .aer-identity-right div label {
+          .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-left div label, .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-right div label {
             font-size: 16px;
             font-weight: bold; }
-          .aer-character .aer-identity .aer-identity-content .aer-identity-left div input, .aer-character .aer-identity .aer-identity-content .aer-identity-right div input {
+          .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-left div input, .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-right div input, .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-left div .sheet-aer-character-content .sheet-parchemin .sheet-value, .sheet-aer-character .sheet-aer-character-content .sheet-parchemin .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-left div .sheet-value, .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-right div .sheet-aer-character-content .sheet-parchemin .sheet-value, .sheet-aer-character .sheet-aer-character-content .sheet-parchemin .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-right div .sheet-value, .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-left div .sheet-aer-character-content .sheet-parchemin-long .sheet-value, .sheet-aer-character .sheet-aer-character-content .sheet-parchemin-long .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-left div .sheet-value, .sheet-aer-character .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-right div .sheet-aer-character-content .sheet-parchemin-long .sheet-value, .sheet-aer-character .sheet-aer-character-content .sheet-parchemin-long .sheet-aer-identity .sheet-aer-identity-content .sheet-aer-identity-right div .sheet-value {
             background-color: transparent;
             border: 0;
             border-bottom: 1px solid black;
             padding: 8px; }
-  .aer-character .aer-attribut {
+  .sheet-aer-character .sheet-aer-attribut {
     display: flex;
     flex-direction: column;
     justify-content: space-around; }
-    .aer-character .aer-attribut td {
+    .sheet-aer-character .sheet-aer-attribut td {
       vertical-align: middle !important; }
-  .aer-character .aer-skills {
+  .sheet-aer-character .sheet-aer-skills {
     display: flex;
     flex-direction: column; }
-    .aer-character .aer-skills .aer-skills-row {
+    .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row {
       flex: 1 1 auto;
       display: flex;
       flex-direction: row;
       justify-content: space-around; }
-      .aer-character .aer-skills .aer-skills-row .aer-box {
+      .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box {
         display: flex;
         flex-direction: column; }
-        .aer-character .aer-skills .aer-skills-row .aer-box h3 {
+        .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box h3 {
           text-align: center; }
-        .aer-character .aer-skills .aer-skills-row .aer-box .skill-expand-row {
+        .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-skill-expand-row {
           display: flex;
           flex-direction: row; }
-          .aer-character .aer-skills .aer-skills-row .aer-box .skill-expand-row .title {
+          .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-skill-expand-row .sheet-title {
             width: 80px;
             text-align: center; }
-        .aer-character .aer-skills .aer-skills-row .aer-box .aer-skill-list {
+        .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list {
           width: 112px;
           display: flex;
           flex-direction: row;
           list-style: none; }
-          .aer-character .aer-skills .aer-skills-row .aer-box .aer-skill-list li {
+          .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li {
+            position: relative;
             margin-left: 8px; }
-            .aer-character .aer-skills .aer-skills-row .aer-box .aer-skill-list li:first-child {
+            .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li:first-child {
               margin-left: 0; }
-    .aer-character .aer-skills .aer-circle {
+    .sheet-aer-character .sheet-aer-skills .sheet-aer-circle {
+      position: absolute;
+      left: 0;
       display: block;
       width: 24px;
       height: 24px;
       background-image: url("../img/Point-competence-vide.png");
       background-repeat: no-repeat;
       background-size: contain; }
-      .aer-character .aer-skills .aer-circle.active {
+      .sheet-aer-character .sheet-aer-skills .sheet-aer-circle.sheet-active {
         background-image: url("../img/Point-competence-plein.png"); }
-  .aer-character .aer-status {
+  .sheet-aer-character .sheet-aer-status {
     display: flex;
     flex-direction: column; }
-    .aer-character .aer-status .aer-status-row {
+    .sheet-aer-character .sheet-aer-status .sheet-aer-status-row {
       flex: 1 1 auto;
       display: flex;
       flex-direction: row;
       justify-content: space-between; }
-  .aer-character .avatar {
+  .sheet-aer-character .sheet-avatar {
     display: flex;
     flex-direction: row;
     justify-content: space-around; }
-    .aer-character .avatar .avatar-img {
+    .sheet-aer-character .sheet-avatar .sheet-avatar-img {
       display: block;
       width: 200px;
       height: 200px;
       background-image: url("../img/Avatar.png");
       background-repeat: no-repeat;
       background-size: contain; }
-  .aer-character .aer-experience {
+  .sheet-aer-character .sheet-aer-experience {
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .aer-character .aer-monnaie {
+  .sheet-aer-character .sheet-aer-monnaie {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    .aer-character .aer-monnaie td {
+    .sheet-aer-character .sheet-aer-monnaie td {
       vertical-align: middle !important; }
-    .aer-character .aer-monnaie .label {
+    .sheet-aer-character .sheet-aer-monnaie .sheet-label {
       font-weight: bold; }

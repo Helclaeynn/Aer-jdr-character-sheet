@@ -26,7 +26,7 @@ html,body {
 /**
  Define the environnement of the character AER
  **/
-.aer-character {
+.sheet-aer-character {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ html,body {
     /**
      * Common style
      **/
-    .aer-header {
+    .sheet-aer-header {
         margin: 0 auto;
         padding: 8px 0;
         display: block;
@@ -53,7 +53,7 @@ html,body {
         background-size: contain;
     }
 
-    .aer-character-content {
+    .sheet-aer-character-content {
         flex: 1 1 auto;
         overflow-y: scroll;
         overflow-x: hidden;
@@ -121,8 +121,18 @@ html,body {
 
         }
 
-        .parchemin {
-            display: block;
+        input {
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid black;
+            padding: 8px;
+        }
+
+        .sheet-parchemin {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             width: 70px;
             height: 50px;
             background-image: url("../img/Parchemin.png");
@@ -130,13 +140,22 @@ html,body {
             background-size: contain;
             text-align: center;
 
-            .value {
+            .sheet-value {
+                @extend input;
+
+                border: 0;
                 font-size: 16px;
                 color: black;
+                width: 45px;
+                text-align: center;
             }
         }
 
-        .parchemin-long {
+        .sheet-parchemin-long {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             background-image: url("../img/parchemin-long.png");
             background-repeat: no-repeat;
             background-size: cover;
@@ -144,9 +163,14 @@ html,body {
             height: 90px;
             text-align: center;
 
-            .value {
+            .sheet-value {
+                @extend input;
+
+                border: 0;
                 font-size: 16px;
                 color: black;
+                width: 45px;
+                text-align: center;
             }
         }
     }
@@ -154,17 +178,17 @@ html,body {
     /**
      * Colonne de gauche
      **/
-    .aer-identity {
+    .sheet-aer-identity {
         display: flex;
         flex-direction: column;
 
-        .aer-identity-content {
+        .sheet-aer-identity-content {
             flex: 1 1 auto;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
 
-            .aer-identity-left {
+            .sheet-aer-identity-left {
                 display: flex;
                 flex-direction: column;
 
@@ -189,13 +213,13 @@ html,body {
                 }
             }
 
-            .aer-identity-right {
-                @extend .aer-identity-left;
+            .sheet-aer-identity-right {
+                @extend .sheet-aer-identity-left;
             }
         }
     }
 
-    .aer-attribut {
+    .sheet-aer-attribut {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -205,17 +229,17 @@ html,body {
         }
     }
 
-    .aer-skills {
+    .sheet-aer-skills {
         display: flex;
         flex-direction: column;
 
-        .aer-skills-row {
+        .sheet-aer-skills-row {
             flex: 1 1 auto;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
 
-            .aer-box {
+            .sheet-aer-box {
                 display: flex;
                 flex-direction: column;
 
@@ -223,23 +247,24 @@ html,body {
                     text-align: center;
                 }
 
-                .skill-expand-row {
+                .sheet-skill-expand-row {
                     display: flex;
                     flex-direction: row;
     
-                    .title {
+                    .sheet-title {
                         width: 8px * 10;
                         text-align: center;
                     }
                 }
     
-                .aer-skill-list {
+                .sheet-aer-skill-list {
                     width: 112px;
                     display: flex;
                     flex-direction: row;
                     list-style: none;
     
                     li {
+                        position: relative;
                         margin-left: 8px;
     
                         &:first-child{
@@ -250,17 +275,17 @@ html,body {
             }
         }
 
-        .aer-circle {
+        .sheet-aer-circle {
+            position: absolute;
+            left: 0;
             display: block;
             width: 24px;
             height: 24px;
-            // border: 2px solid black;
-            // border-radius: 16px;
             background-image: url("../img/Point-competence-vide.png");
             background-repeat: no-repeat;
             background-size: contain;
 
-            &.active {
+            &.sheet-active {
                 background-image: url("../img/Point-competence-plein.png");
             }
         }
@@ -271,11 +296,11 @@ html,body {
     * Colonne de droite
     */
 
-    .aer-status {
+    .sheet-aer-status {
         display: flex;
         flex-direction: column;
 
-        .aer-status-row {
+        .sheet-aer-status-row {
             flex: 1 1 auto;
             display: flex;
             flex-direction: row;
@@ -283,12 +308,12 @@ html,body {
         }
     }
 
-    .avatar {
+    .sheet-avatar {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
 
-        .avatar-img {
+        .sheet-avatar-img {
             display: block;
             width: 200px;
             height: 200px;
@@ -298,13 +323,13 @@ html,body {
         }
     }
 
-    .aer-experience {
+    .sheet-aer-experience {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .aer-monnaie {
+    .sheet-aer-monnaie {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -313,7 +338,7 @@ html,body {
             vertical-align: middle !important;
         }
 
-        .label {
+        .sheet-label {
             font-weight: bold;
         }
     }
