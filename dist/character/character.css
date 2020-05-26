@@ -182,20 +182,29 @@ html, body {
           list-style: none; }
           .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li {
             position: relative;
-            margin-left: 8px; }
+            display: block;
+            margin-left: 8px;
+            width: 30px;
+            height: 30px; }
             .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li:first-child {
               margin-left: 0; }
+            .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li input[type="checkbox"], .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li .sheet-aer-character-content .sheet-parchemin .sheet-value[type="checkbox"], .sheet-aer-character .sheet-aer-character-content .sheet-parchemin .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li .sheet-value[type="checkbox"], .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li .sheet-aer-character-content .sheet-parchemin-long .sheet-value[type="checkbox"], .sheet-aer-character .sheet-aer-character-content .sheet-parchemin-long .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li .sheet-value[type="checkbox"] {
+              position: absolute;
+              opacity: 0;
+              z-index: 10; }
+            .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li .sheet-aer-circle {
+              position: absolute;
+              top: 0;
+              left: 0; }
     .sheet-aer-character .sheet-aer-skills .sheet-aer-circle {
-      position: absolute;
-      left: 0;
       display: block;
       width: 24px;
       height: 24px;
       background-image: url("../img/Point-competence-vide.png");
       background-repeat: no-repeat;
       background-size: contain; }
-      .sheet-aer-character .sheet-aer-skills .sheet-aer-circle.sheet-active {
-        background-image: url("../img/Point-competence-plein.png"); }
+    .sheet-aer-character .sheet-aer-skills .sheet-aer-circle-active, .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li input[type="checkbox"]:checked ~ .sheet-aer-circle, .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li .sheet-aer-character-content .sheet-parchemin .sheet-value[type="checkbox"]:checked ~ .sheet-aer-circle, .sheet-aer-character .sheet-aer-character-content .sheet-parchemin .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li .sheet-value[type="checkbox"]:checked ~ .sheet-aer-circle, .sheet-aer-character .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li .sheet-aer-character-content .sheet-parchemin-long .sheet-value[type="checkbox"]:checked ~ .sheet-aer-circle, .sheet-aer-character .sheet-aer-character-content .sheet-parchemin-long .sheet-aer-skills .sheet-aer-skills-row .sheet-aer-box .sheet-aer-skill-list li .sheet-value[type="checkbox"]:checked ~ .sheet-aer-circle {
+      background-image: url("../img/Point-competence-plein.png"); }
   .sheet-aer-character .sheet-aer-status {
     display: flex;
     flex-direction: column; }

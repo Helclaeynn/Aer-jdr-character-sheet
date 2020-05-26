@@ -265,10 +265,29 @@ html,body {
     
                     li {
                         position: relative;
+                        display: block;
                         margin-left: 8px;
+                        width: 30px;
+                        height: 30px;
     
                         &:first-child{
                             margin-left: 0;
+                        }
+
+                        input[type="checkbox"] {
+                            position: absolute;
+                            opacity: 0;
+                            z-index: 10;
+                        }
+
+                        input[type="checkbox"]:checked ~ .sheet-aer-circle {
+                            @extend .sheet-aer-circle-active;
+                        }
+
+                        .sheet-aer-circle {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
                         }
                     }
                 }
@@ -276,8 +295,6 @@ html,body {
         }
 
         .sheet-aer-circle {
-            position: absolute;
-            left: 0;
             display: block;
             width: 24px;
             height: 24px;
@@ -285,9 +302,10 @@ html,body {
             background-repeat: no-repeat;
             background-size: contain;
 
-            &.sheet-active {
-                background-image: url("../img/Point-competence-plein.png");
-            }
+        }
+
+        .sheet-aer-circle-active {
+            background-image: url("../img/Point-competence-plein.png");
         }
     }
 
